@@ -1,0 +1,38 @@
+
+
+<div>
+    <img class=logoImage  src="../../assets/img/logo.png">
+    
+    </div>
+    <img style="margin-left: 52%"  src="../../assets/img/shape.png">
+
+    <div  class="enterTSys">
+
+      כניסה למערכת
+    </div>
+    <img style="margin-left: 55%"  src="../../assets/img/shape2.png">
+
+<form [formGroup]="userForm"  #form="ngForm" (ngSubmit)="login(form)">
+
+   
+<div    class=" emaildiv form-group">
+    <label class="center-block">:איימיל
+    </label>
+
+  </div>
+  <input  class="emailInput form-control" formControlName="email" required>
+
+  <div  class=" passworddiv form-group">
+      <label class="center-block">:סיסמא
+        
+      </label>
+    </div>
+    <input    class=" passwordInput form-control" formControlName="password" required>
+    <div style="text-align: center">
+    <button class="button" [disabled]="!form.valid" type="submit"   >
+      <span class="spanBut" >כניסה</span>
+      
+      </button>
+    </div>
+    </form>
+
